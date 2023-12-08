@@ -1,18 +1,14 @@
-# eliud_pkg_text
+# eliud_pkg_text_model
 
-Eliud text package
+Eliud text model package
 
 ## Dependency diagram
 
-![Dependency diagram](https://github.com/eliudio/eliud_pkg_text/raw/main/depends.jpg)
+![Dependency diagram](https://github.com/eliudio/eliud_pkg_text_model/raw/main/depends.jpg)
 
 ### links
 |Package                                                                    |Description                                            |
 |---------------------------------------------------------------------------|-------------------------------------------------------|
-|[eliud_pkg_text](https://pub.dev/packages/eliud_pkg_text)                  | This package                                          |
-|[eliud_core](https://pub.dev/packages/eliud_core)                          | Eliud core package                                    |
-|[eliud_generator](https://pub.dev/packages/eliud_generator)                | Eliud generator                                       |
-|[eliud_pkg_medium](https://pub.dev/packages/eliud_pkg_medium)              | Eliud medium package                                  |
 
 ## eliud.io
 

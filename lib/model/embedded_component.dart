@@ -16,16 +16,9 @@
 import 'package:eliud_core_helpers/etc/random.dart';
 import 'package:eliud_core_helpers/helpers/common_tools.dart';
 import 'package:eliud_core_helpers/query/query_tools.dart';
-import 'package:eliud_core_main/model/app_model.dart';
 
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../model/html_platform_medium_list_bloc.dart';
-import '../model/html_platform_medium_list.dart';
-import '../model/html_platform_medium_list_event.dart';
 import '../model/html_platform_medium_model.dart';
 import '../model/html_platform_medium_entity.dart';
 import '../model/html_platform_medium_repository.dart';
@@ -33,36 +26,7 @@ import '../model/html_platform_medium_repository.dart';
 typedef HtmlPlatformMediumListChanged = Function(
     List<HtmlPlatformMediumModel> values);
 
-htmlPlatformMediumsList(app, context, value, trigger) =>
-    EmbeddedComponentFactory.htmlPlatformMediumsList(
-        app, context, value, trigger);
-
-class EmbeddedComponentFactory {
-/* 
- * htmlPlatformMediumsList function to construct a list of HtmlPlatformMediumModel
- */
-  static Widget htmlPlatformMediumsList(
-      AppModel app,
-      BuildContext context,
-      List<HtmlPlatformMediumModel> values,
-      HtmlPlatformMediumListChanged trigger) {
-    HtmlPlatformMediumInMemoryRepository inMemoryRepository =
-        HtmlPlatformMediumInMemoryRepository(
-      trigger,
-      values,
-    );
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<HtmlPlatformMediumListBloc>(
-          create: (context) => HtmlPlatformMediumListBloc(
-            htmlPlatformMediumRepository: inMemoryRepository,
-          )..add(LoadHtmlPlatformMediumList()),
-        )
-      ],
-      child: HtmlPlatformMediumListWidget(app: app, isEmbedded: true),
-    );
-  }
-}
+class EmbeddedComponentFactory {}
 
 /* 
  * HtmlPlatformMediumInMemoryRepository is an in memory implementation of HtmlPlatformMediumRepository

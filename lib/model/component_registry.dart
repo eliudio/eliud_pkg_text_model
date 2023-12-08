@@ -36,9 +36,6 @@ class ComponentRegistry {
       "htmlWithPlatformMediums",
     ]);
 
-    Apis.apis().getRegistryApi().register(
-        componentName: "eliud_pkg_text_model_internalWidgets",
-        componentConstructor: ListComponentFactory());
     Apis.apis().getRegistryApi().addDropDownSupporter(
         "htmlWithPlatformMediums", DropdownButtonComponentFactory());
     Apis.apis().getRegistryApi().register(
